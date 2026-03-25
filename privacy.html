@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Политика конфиденциальности — История ИИ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0f14; --surface: #13161e; --border: #1e2330;
+      --accent: #D97706; --accent2: #F59E0B;
+      --text: #e8eaf0; --muted: #7a80a0; --heading: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Mulish', sans-serif; font-size: 16px; line-height: 1.75; min-height: 100vh; }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: linear-gradient(rgba(217,119,6,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(217,119,6,0.03) 1px, transparent 1px);
+      background-size: 40px 40px; pointer-events: none; z-index: 0;
+    }
+    .container { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 60px 24px 100px; }
+    .header { text-align: center; margin-bottom: 64px; }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(217,119,6,0.15), rgba(245,158,11,0.15));
+      border: 1px solid rgba(217,119,6,0.3); border-radius: 100px;
+      padding: 6px 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 24px;
+    }
+    h1 {
+      font-family: 'Unbounded', sans-serif; font-size: clamp(26px, 5vw, 38px);
+      font-weight: 600; line-height: 1.25; margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 0%, #F59E0B 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .meta { color: var(--muted); font-size: 14px; }
+    .divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; margin: 32px auto; }
+    .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; margin-bottom: 48px; }
+    .toc-title { font-family: 'Unbounded', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+    .toc ol { padding-left: 20px; }
+    .toc li { margin-bottom: 8px; }
+    .toc a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .toc a:hover { color: var(--accent); }
+    .section { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 36px 40px; margin-bottom: 20px; transition: border-color 0.2s; }
+    .section:hover { border-color: rgba(217,119,6,0.25); }
+    .section-num { font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 600; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+    h2 { font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 600; color: var(--heading); margin-bottom: 20px; line-height: 1.3; }
+    p { margin-bottom: 14px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; color: var(--text); }
+    .highlight-box { background: linear-gradient(135deg, rgba(217,119,6,0.08), rgba(245,158,11,0.08)); border: 1px solid rgba(217,119,6,0.2); border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: 14px; line-height: 1.9; }
+    .tag { display: inline-block; background: rgba(217,119,6,0.12); color: var(--accent); border-radius: 6px; padding: 2px 8px; font-size: 12px; font-weight: 600; margin-right: 4px; }
+    .service-card { border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; background: rgba(255,255,255,0.02); }
+    .service-card .name { font-family: 'Unbounded', sans-serif; font-size: 13px; font-weight: 600; color: var(--heading); margin-bottom: 8px; }
+    .service-card p { font-size: 14px; margin-bottom: 0; color: var(--muted); }
+    strong { color: var(--heading); font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-card { background: linear-gradient(135deg, rgba(217,119,6,0.1), rgba(245,158,11,0.1)); border: 1px solid rgba(217,119,6,0.25); border-radius: 14px; padding: 28px 32px; text-align: center; margin-top: 48px; }
+    .contact-card p { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+    .contact-email { font-family: 'Unbounded', sans-serif; font-size: 15px; color: var(--accent); font-weight: 600; }
+    .footer { text-align: center; margin-top: 48px; color: var(--muted); font-size: 13px; }
+    .footer a { color: var(--accent2); margin: 0 8px; }
+    @media (max-width: 600px) { .section { padding: 24px 20px; } .toc { padding: 20px; } }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="badge">Юридический документ</div>
+    <h1>Политика конфиденциальности</h1>
+    <p class="meta">Приложение «История ИИ» · Дата вступления в силу: <strong style="color:var(--text)">24.03.2026</strong></p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Содержание</div>
+    <ol>
+      <li><a href="#s1">Общие положения</a></li>
+      <li><a href="#s2">Какие данные мы собираем</a></li>
+      <li><a href="#s3">Как мы используем данные</a></li>
+      <li><a href="#s4">Сторонние сервисы</a></li>
+      <li><a href="#s5">Реклама</a></li>
+      <li><a href="#s6">Хранение и защита данных</a></li>
+      <li><a href="#s7">Права пользователей</a></li>
+      <li><a href="#s8">Дети</a></li>
+      <li><a href="#s9">Изменения политики</a></li>
+      <li><a href="#s10">Контакты</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="s1">
+    <div class="section-num">Раздел 01</div>
+    <h2>Общие положения</h2>
+    <p>Настоящая Политика конфиденциальности описывает, какие данные собирает мобильное приложение «История ИИ» (далее — «Приложение»), как они используются, хранятся и защищаются.</p>
+    <p>Устанавливая и используя Приложение, вы подтверждаете согласие с настоящей Политикой. Если вы не согласны — прекратите использование Приложения и удалите его с устройства.</p>
+    <div class="highlight-box">
+      <strong>Разработчик:</strong> Индивидуальный разработчик<br/>
+      <strong>Контактный email:</strong> <a href="mailto:ru.recipes.support@gmail.com">ru.recipes.support@gmail.com</a><br/>
+      <strong>Платформа:</strong> RuStore (Android)
+    </div>
+  </div>
+
+  <div class="section" id="s2">
+    <div class="section-num">Раздел 02</div>
+    <h2>Какие данные мы собираем</h2>
+    <p><strong>Технические данные и аналитика:</strong></p>
+    <ul>
+      <li>Модель устройства и версия операционной системы Android.</li>
+      <li>Обезличенный идентификатор устройства.</li>
+      <li>Данные о сбоях и технических ошибках (crash reports).</li>
+      <li>Статистика использования функций Приложения (количество запросов, переходы между экранами).</li>
+    </ul>
+    <p><strong>Рекламные данные:</strong></p>
+    <ul>
+      <li>Рекламный идентификатор устройства (Google Advertising ID / GAID) — для показа рекламы.</li>
+    </ul>
+    <p><strong>Данные запросов по истории:</strong></p>
+    <ul>
+      <li>Фотографии заданий и текстовые вопросы по истории, которые вы отправляете ИИ-ассистенту. Эти данные передаются на наш собственный сервер для обработки и не сохраняются после получения ответа. Исторические даты работает полностью локально на устройстве и не передаётся на сервер.</li>
+    </ul>
+    <p><strong>Мы не собираем:</strong> имя, фамилию, номер телефона, геолокацию, платёжные данные, список контактов или иные персональные данные сверх указанного выше.</p>
+  </div>
+
+  <div class="section" id="s3">
+    <div class="section-num">Раздел 03</div>
+    <h2>Как мы используем данные</h2>
+    <ul>
+      <li><span class="tag">Сервис</span> Обработка запросов по истории и предоставление ответов.</li>
+      <li><span class="tag">Качество</span> Выявление и устранение технических сбоев.</li>
+      <li><span class="tag">Аналитика</span> Анализ статистики использования для развития Приложения.</li>
+      <li><span class="tag">Реклама</span> Показ рекламы, в том числе Rewarded для получения дополнительных чатов.</li>
+      <li><span class="tag">Поддержка</span> Ответы на обращения пользователей.</li>
+    </ul>
+    <p>Данные не используются для продажи третьим лицам или маркетинговых рассылок.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <div class="section-num">Раздел 04</div>
+    <h2>Сторонние сервисы</h2>
+    <p>Приложение взаимодействует со следующими сервисами:</p>
+
+    <div class="service-card">
+      <div class="name">🖥 Собственный сервер Приложения</div>
+      <p>Все запросы по истории (фотографии задач и текст) передаются исключительно на наш собственный защищённый сервер. Ни один сторонний ИИ-сервис не получает прямой доступ к вашим запросам. Данные не хранятся после обработки.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="name">📊 AppMetrica (Яндекс)</div>
+      <p>Используется для сбора аналитики и отчётов о сбоях. Получает технические данные об устройстве и статистику использования в обезличенном виде.<br/><a href="https://yandex.ru/legal/confidential/" target="_blank">Политика конфиденциальности Яндекса →</a></p>
+    </div>
+
+    <div class="service-card">
+      <div class="name">📢 Рекламные партнёры</div>
+      <p>Для показа рекламы (Interstitial и Rewarded) используются сторонние рекламные сети. Они могут получать рекламный идентификатор устройства (GAID) в соответствии со своими политиками конфиденциальности.</p>
+    </div>
+
+    <p>Мы не продаём данные пользователей. Передача данных третьим лицам происходит только в объёме, необходимом для работы указанных сервисов, либо по требованию уполномоченных органов РФ.</p>
+  </div>
+
+  <div class="section" id="s5">
+    <div class="section-num">Раздел 05</div>
+    <h2>Реклама</h2>
+    <p>Приложение содержит рекламу для поддержания бесплатного доступа:</p>
+    <ul>
+      <li><strong>Rewarded-реклама</strong> — добровольный просмотр видеоролика в обмен на дополнительные чаты.</li>
+      <li><strong>Interstitial-реклама</strong> — редкие межстраничные объявления между переходами по экранам.</li>
+    </ul>
+    <p>Вы можете сбросить или ограничить использование рекламного идентификатора в настройках устройства: <em>Настройки → Конфиденциальность → Реклама</em>.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <div class="section-num">Раздел 06</div>
+    <h2>Хранение и защита данных</h2>
+    <ul>
+      <li>Все запросы между Приложением и сервером передаются по защищённому соединению (HTTPS/TLS).</li>
+      <li>Запросы по истории не хранятся на сервере после обработки.</li>
+      <li>История чатов хранится локально на устройстве пользователя.</li>
+      <li>Аналитические данные хранятся на серверах AppMetrica (Яндекс) согласно их политике.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s7">
+    <div class="section-num">Раздел 07</div>
+    <h2>Права пользователей</h2>
+    <p>В соответствии с Федеральным законом № 152-ФЗ «О персональных данных» вы вправе:</p>
+    <ul>
+      <li>Запросить информацию об обрабатываемых данных.</li>
+      <li>Потребовать удаления данных, связанных с вашим использованием Приложения.</li>
+      <li>Отозвать согласие на обработку данных.</li>
+    </ul>
+    <p>Для реализации прав обратитесь по email из раздела «Контакты». Срок рассмотрения — до 30 рабочих дней.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <div class="section-num">Раздел 08</div>
+    <h2>Дети</h2>
+    <p>Приложение ориентировано на широкую аудиторию, включая школьников. Мы не собираем персональные данные детей сверх технически необходимого минимума для работы Приложения.</p>
+    <p>Если вы являетесь родителем или законным представителем и считаете, что ребёнок передал лишние данные — свяжитесь с нами для их незамедлительного удаления.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <div class="section-num">Раздел 09</div>
+    <h2>Изменения политики</h2>
+    <p>Актуальная версия Политики всегда доступна по постоянной ссылке в Приложении. При существенных изменениях пользователи будут уведомлены через Приложение. Продолжение использования после публикации изменений означает их принятие.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <div class="section-num">Раздел 10</div>
+    <h2>Контакты</h2>
+    <div class="highlight-box">
+      <strong>Email:</strong> <a href="mailto:ru.recipes.support@gmail.com">ru.recipes.support@gmail.com</a><br/>
+      <strong>Срок ответа:</strong> до 30 рабочих дней
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <p>Остались вопросы?</p>
+    <div class="contact-email">ai.recipes.support@gmail.com</div>
+    <p style="margin-top:12px; font-size:13px;">Также доступно: <a href="https://novbichannel.github.io/history-ai-legal/terms.html">Условия использования</a></p>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 История ИИ · <a href="https://novbichannel.github.io/history-ai-legal/terms.html">Условия использования</a></p>
+    <p style="margin-top:8px;">Соответствует законодательству Российской Федерации</p>
+  </div>
+
+</div>
+</body>
+</html>
